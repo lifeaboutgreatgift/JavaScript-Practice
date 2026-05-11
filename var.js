@@ -9,3 +9,5 @@ console.log(name);
 const PI = 3.14159;
 
 console.log(PI);
+
+// variables used for storing data and value 
