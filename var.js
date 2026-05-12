@@ -31,3 +31,17 @@ let score = 100
 let price = 9.99
 console.log(score)    // 100
 console.log(price)    // 9.9
+
+// Boolean → true/false
+// (lowercase in JS, uppercase in Python!)
+let isStudent = true
+let isWorking = false
+console.log(isStudent)    // true
+
+// Null → empty on purpose
+let emptyValue = null
+console.log(emptyValue)   // null
+
+// Undefined → declared but no value given
+let notAssigned
+console.log(notAssigned)  // undefined
