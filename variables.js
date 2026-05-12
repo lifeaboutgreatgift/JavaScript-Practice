@@ -20,10 +20,10 @@ console.log(PI)       // 3.14159
 // ── DATA TYPES ────────────────────────────
 
 // String → text
-let name = "Afroj"
+let name = "Ananya"
 let country = 'India'       // single quotes work too!
 let intro = `I am ${name}`  // template literal!
-console.log(intro)          // I am Afroj
+console.log(intro)          // I am Ananya
 
 // Number → integers and decimals both!
 // (unlike Python which has int and float separately)
@@ -45,3 +45,12 @@ console.log(emptyValue)   // null
 // Undefined → declared but no value given
 let notAssigned
 console.log(notAssigned)  // undefined
+
+// ── CHECK DATA TYPE ───────────────────────
+// typeof tells you what type something is
+
+console.log(typeof name)        // string
+console.log(typeof score)       // number
+console.log(typeof isStudent)   // boolean
+console.log(typeof emptyValue)  // object (JS quirk!)
+console.log(typeof notAssigned) // undefined
