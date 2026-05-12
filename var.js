@@ -1,14 +1,33 @@
-let time = 10 ;
-// let is 
-console.log(time);
+// ── VARIABLES IN JAVASCRIPT ───────────────
+// Variable = container that stores data
+// Same concept as Python but different syntax!
 
-const name = "Jane";
+// ── 3 WAYS TO DECLARE ─────────────────────
 
-console.log(name);
+// 1. var → old way, avoid using!
+var oldName = "Ava"
 
-const PI = 3.14159;
+// 2. let → modern, value can change
+let age = 19
+age = 20              // ✅ can change!
+console.log(age)      // 20
 
-console.log(PI);
+// 3. const → value NEVER changes
+const PI = 3.14159
+// PI = 3              // ❌ ERROR! can't change!
+console.log(PI)       // 3.14159
 
-// variables used for storing data and value.
-//updated
+// ── DATA TYPES ────────────────────────────
+
+// String → text
+let name = "Afroj"
+let country = 'India'       // single quotes work too!
+let intro = `I am ${name}`  // template literal!
+console.log(intro)          // I am Afroj
+
+// Number → integers and decimals both!
+// (unlike Python which has int and float separately)
+let score = 100
+let price = 9.99
+console.log(score)    // 100
+console.log(price)    // 9.9
