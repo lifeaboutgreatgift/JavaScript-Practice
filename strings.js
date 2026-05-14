@@ -31,3 +31,14 @@ console.log(`Next year you'll be ${age + 1}`) //21
 let myName = "Aditi"
 console.log(myName.length) //5
 // counts every character including spaces!
+
+let sentence = "I love coding"
+console.log(sentence.length) // 13
+
+// ── 4. CHANGING CASE ──────────────────────
+let city = "Jaipur"
+console.log(city.toUpperCase()) //JAIPUR
+console.log(city.toLowerCase()) //jaipur
+
+let shout = "HELLO WORLD"
+console.log(shout.toLowerCase()) // hello world
