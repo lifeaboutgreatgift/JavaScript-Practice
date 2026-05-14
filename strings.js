@@ -27,3 +27,7 @@ console.log(`Hello ${name} you are ${age} years old. And you are from ${country}
 // can do math inside too!
 console.log(`Next year you'll be ${age + 1}`) //21
 
+// ── 3. STRING LENGTH ──────────────────────
+let myName = "Aditi"
+console.log(myName.length) //5
+// counts every character including spaces!
