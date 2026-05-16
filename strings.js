@@ -58,3 +58,18 @@ console.log(quote.indexOf("python"))     // -1 (not found!)
 console.log(quote.startsWith("jack"))     // true
 console.log(quote.endsWith("none"))       // true
 
+// ── 6. CUTTING STRINGS ────────────────────
+let fullName = "Garrett Graham"
+
+// slice(start, end) - cut part of string
+console.log(fullName.slice(0, 7))       //Garrett
+console.log(fullName.slice(8))          //Graham
+console.log(fullName.slice(-6))         //Graham (from end!)
+
+//reminder here - it depend on letters of a word garrett has 7 letters in it
+//and -6 number means it target 6 letter on end from right
+
+// ── 7. REPLACING TEXT ─────────────────────
+let message = "I love Python"
+let newMessage = message.replace("Python", "JavaScript")
+console.log(newMessage)   //I love JavaScript
