@@ -42,3 +42,19 @@ console.log(city.toLowerCase()) //jaipur
 
 let shout = "HELLO WORLD"
 console.log(shout.toLowerCase()) // hello world
+
+// ── 5. FINDING TEXT ───────────────────────
+let quote = "jack of all trades master of none"
+
+// includes - does it contain this word?
+console.log(quote.includes("trades"))    //true
+console.log(quote.includes("python"))    // false
+
+// indexOf - where does word start?
+console.log(quote.indexOf("trades"))     //12
+console.log(quote.indexOf("python"))     // -1 (not found!)
+
+// startsWith and endsWith
+console.log(quote.startsWith("jack"))     // true
+console.log(quote.endsWith("none"))       // true
+
