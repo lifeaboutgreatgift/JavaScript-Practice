@@ -73,3 +73,30 @@ console.log(fullName.slice(-6))         //Graham (from end!)
 let message = "I love Python"
 let newMessage = message.replace("Python", "JavaScript")
 console.log(newMessage)   //I love JavaScript
+
+// ── 8. SPLITTING STRING ───────────────────
+// split -> breaks string into array!
+let fruits = "apple,banana,mango, grape"
+let fruitArray = fruits.split(",")
+console.log(fruitArray)
+// ['apple', 'banana', 'mango', 'grape']
+
+let words = "I love coding"
+let wordArray = words.split(" ")
+console.log(wordArray)
+// ['I', 'love', 'coding']
+
+// ── 9. TRIM ───────────────────────────────
+// removes extra spaces from start and end
+// super useful when taking user input!
+let messy = "   Hello Hannah!   "
+console.log(messy.trim())   //"Hello Hannah!"
+console.log(messy.trimStart())    //"Hello Hannah!   "
+console.log(messy.trimEnd())     //"   Hello Hannah!"
+
+// ── 10. REPEAT ────────────────────────────
+let star = "⭐"
+console.log(star.repeat(5))    // ⭐⭐⭐⭐⭐
+
+let line = "-"
+console.log(line.repeat(20))   // --------------------
