@@ -100,3 +100,28 @@ console.log(star.repeat(5))    // ⭐⭐⭐⭐⭐
 
 let line = "-"
 console.log(line.repeat(20))   // --------------------
+
+
+// ── REAL WORLD USES ───────────────────────
+
+// 1. Username validation
+let username = "  Wellsy245  "
+let cleanUsername = username.trim().toLowerCase()
+console.log(cleanUsername)  // wellsy245
+// trim spaces + lowercase = clean username! 
+
+// 2. Check valid email
+let email = "hannahwellsy@gmail.com"
+console.log(email.includes("@"))      // true
+console.log(email.includes(".com"))   // true
+// both true = probably valid email! 😄
+
+// 3. Get first name from full name
+let fullname = "Garrett Graham"
+let firstName = fullname.slice(0, fullname.indexOf(" "))
+console.log(firstName)    // Garrett
+
+// 4. Count words in sentence
+let text = "I want to become a Ice Hockey Player"
+let wordCount = text.split(" ").length
+console.log(`Word count: ${wordCount}`)    // 7
