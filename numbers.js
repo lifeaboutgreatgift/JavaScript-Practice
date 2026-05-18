@@ -48,3 +48,55 @@ console.log(random)         // random 1-10!
 // random number between 1 and 100
 let random100 = Math.floor(Math.random() * 100) + 1
 console.log(random100)      // random 1-100!
+
+// ── 5. NUMBER PROBLEMS ────────────────────
+// JS quirk! watch out for this!
+
+console.log(0.1 + 0.2)      // 0.30000000000000004 😅
+// floating point issue! common in all languages!
+
+// fix it:
+console.log((0.1 + 0.2).toFixed(2))   // 0.30 ✅
+
+// ── 6. CONVERTING STRINGS TO NUMBERS ──────
+// very useful when taking user input!
+
+let strNumber = "42"
+console.log(typeof strNumber)       // string
+
+let converted = Number(strNumber)
+console.log(typeof converted)       // number
+console.log(converted + 8)          // 50 ✅
+
+// parseInt → convert to integer
+console.log(parseInt("42.9"))       // 42 (removes decimal!)
+
+// parseFloat → convert to decimal
+console.log(parseFloat("42.9"))     // 42.9 ✅
+
+// what happens with invalid conversion?
+console.log(Number("hello"))        // NaN!
+console.log(Number("123abc"))       // NaN!
+
+// ── 7. NaN (Not a Number) ─────────────────
+// NaN = result of invalid math operation
+
+console.log(10 / "hello")          // NaN
+console.log(Math.sqrt(-1))         // NaN
+
+// check if something is NaN
+console.log(isNaN(10))             // false → it IS a number
+console.log(isNaN("hello"))        // true → NOT a number
+console.log(isNaN(NaN))            // true
+
+// ── 8. toFixed() ──────────────────────────
+// control decimal places!
+// very useful for prices, calculations!
+
+let price = 9.99999
+console.log(price.toFixed(2))      // 10.00
+console.log(price.toFixed(0))      // 10
+
+let pi = Math.PI
+console.log(pi.toFixed(2))         // 3.14
+console.log(pi.toFixed(4))         // 3.1416
