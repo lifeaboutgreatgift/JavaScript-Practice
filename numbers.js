@@ -106,7 +106,7 @@ console.log(pi.toFixed(4))         // 3.1416
 // 1. SHOPPING CART
 let itemPrice = 299.99
 let quantity = 3
-let descount = 0.10   // 10% discount
+let discount = 0.10   // 10% discount
 let total = itemPrice * quantity
 let discountAmount = total * discount 
 let finalPrice = total - discountAmount
@@ -117,3 +117,20 @@ console.log(`Total: Rupee ${total.toFixed(2)}`)
 console.log(`Discount: Rupee ${discountAmount.toFixed(2)}`)
 console.log(`Final price: Rupee ${finalPrice.toFixed(2)}`)
 
+
+// 2. RANDOM DICE GAME
+let dice1 = Math.floor(Math.random() * 6) + 1
+let dice2 = Math.floor(Math.random() * 6) + 1
+let diceTotal = dice1 + dice2
+
+console.log(`Dice 1: ${dice1}`)
+console.log(`Dice 2: ${dice2}`)
+console.log(`Total: ${diceTotal}`)
+
+if (diceTotal === 12) {
+    console.log("That's a Roll baby! []~(￣▽￣)~*")
+} else if (diceTotal >= 10) {
+    console.log("Good Shot d=====(￣▽￣*)b")
+} else {
+    console.log("try again....(ง •_•)ง")
+}
