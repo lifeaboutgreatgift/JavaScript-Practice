@@ -100,3 +100,20 @@ console.log(price.toFixed(0))      // 10
 let pi = Math.PI
 console.log(pi.toFixed(2))         // 3.14
 console.log(pi.toFixed(4))         // 3.1416
+
+// ── REAL WORLD USES ───────────────────────
+
+// 1. SHOPPING CART
+let itemPrice = 299.99
+let quantity = 3
+let descount = 0.10   // 10% discount
+let total = itemPrice * quantity
+let discountAmount = total * discount 
+let finalPrice = total - discountAmount
+
+console.log(`Item price: Rupee ${itemPrice}`)
+console.log(`Quantity: ${quantity}`)
+console.log(`Total: Rupee ${total.toFixed(2)}`)
+console.log(`Discount: Rupee ${discountAmount.toFixed(2)}`)
+console.log(`Final price: Rupee ${finalPrice.toFixed(2)}`)
+
