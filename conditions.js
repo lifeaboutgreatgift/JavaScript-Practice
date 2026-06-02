@@ -3,6 +3,9 @@
 
 //first you declare a variable
 
+// ===== THE DIRECT ACTION TYPE
+
+
 let perTablePerson = 2;
 
 if (perTablePerson <= 3 ) {
@@ -15,6 +18,7 @@ if (perTablePerson <= 3 ) {
 
 //variable initialization - creating intentionally empty box;
 
+// ==== THE STATE MUTATION TYPE
 
 let score = 10;
 let cheerUp = "Briar! Briar! Briar!" ;
@@ -35,3 +39,17 @@ if (score <= 5) {
 console.log(finalMsg);
 // using console for send data out to user!
 // without adding console in last you can't see the output in device.
+
+
+//====== THE FUNCTIONAL TYPE
+// return only works inside a function
+
+function checkTeamStatus () {
+    if (score <= 5) {
+        return boo;
+    }else {
+        return cheerUp;
+    }
+}
+
+console.log(checkTeamStatus());
