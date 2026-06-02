@@ -8,12 +8,12 @@
 
 let perTablePerson = 2;
 
-if (perTablePerson <= 3 ) {
-    console.log("Would you like table for two, sir?");
+if (perTablePerson <= 6 ) {
+    console.log("Would you like a table for two, sir?");
 } else if ( perTablePerson <= 3 ) {
-    console.log("Would you like group table?");
+    console.log("Would you like a large grouptable?");
 } else {
-    console.log("Sorry! we're already reserved for today!")
+    console.log("Sorry! We're already reserved for today!")
 }
 
 //variable initialization - creating intentionally empty box;
@@ -43,6 +43,12 @@ console.log(finalMsg);
 
 //====== THE FUNCTIONAL TYPE
 // return only works inside a function
+
+
+// here we create a function - like creating a recipe (the definition).
+// function -is naming the recipe.
+// internal logic inside it -is the recipe.
+// the execution line - console log - like ordering the food.
 
 function checkTeamStatus () {
     if (score <= 5) {
