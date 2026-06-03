@@ -59,3 +59,36 @@ function checkTeamStatus () {
 }
 
 console.log(checkTeamStatus());
+
+
+//=== CONDITIONAL STATEMENTS has 4 types
+
+// 1. if/ else if/ else  - checking ranges of data (e.g., score >= 50)
+// 2. switch   - matching one box against many exact text/number options
+// 3. Ternary Operator(? :)   - shrinking a simple if/else down into one short line
+// 4. Logical short-circuiting  - setting up quick backup values if data goes missing.
+
+// Already covered first two types above
+
+//The ternary operator does same job in one single line. the word "ternary" just means "three parts".
+
+//let finalMsg = (score <= 5) ? boo : cheerUp;  - comment out cause finalMsg is already declared above it will show an error.
+
+let playerScore = 2;
+let playerWins = "Yay! You get level up."
+let playerLoses = "Oops! You lose it"
+
+let dashboardScore = (playerScore <= 2) ? playerWins : playerLoses;
+
+console.log(dashboardScore);
+
+
+/* ======== Logical short-circuiting (||) ========= */
+
+// It uses the OR || operator to instantly make a choice without writing any if or else keywords at all.
+
+let userNickname = null;
+
+let displayName = userNickname || "GuestPlayer" ;
+
+console.log(displayName);
