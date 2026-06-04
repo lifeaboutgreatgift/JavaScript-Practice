@@ -8,9 +8,9 @@
 
 let perTablePerson = 2;
 
-if (perTablePerson <= 6 ) {
+if (perTablePerson <= 2 ) {
     console.log("Would you like a table for two, sir?");
-} else if ( perTablePerson <= 3 ) {
+} else if ( perTablePerson <= 6 ) {
     console.log("Would you like a large grouptable?");
 } else {
     console.log("Sorry! We're already reserved for today!")
