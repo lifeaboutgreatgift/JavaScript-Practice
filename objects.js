@@ -15,3 +15,6 @@ let user = {
 }
 
 console.log(user.hasSibling);
+
+// in console.log put (object.key)- user.hasSibling, here period (.) is dot natation to access an object's properties.
+// property values are accessible using the dot notation.
