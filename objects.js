@@ -102,3 +102,55 @@ let wizard = {
     }
 };
 wizard.castSpell(); // Executing the method updates wizard.mana to 15
+
+
+// ==========================================
+// OBJECT CONSTRUCTOR (The Object Factory)
+// ==========================================
+
+/* While literal syntax ({}) is great for single objects, it fails if we need thousands of objects.
+ An Object Constructor is a centralized factory blueprint or template.
+ It ensures every new object follows the exact same structural template automatically.
+
+ Rules for Constructors:
+ 1. The function name MUST start with a Capital Letter (PascalCase).
+ 2. It must be executed using the "new" keyword. */
+
+function Player(name, role, health) {
+    // UNDER THE HOOD MECHANICS:
+    // When called with "new", JavaScript secretly executes a hidden step:
+    // Step 1: It creates a blank object in Heap memory: this = {};
+    
+    this.name = name;   // Assigns the 'name' argument to this object's local folder
+    this.role = role;   // Assigns the 'role' argument to this object's local folder
+    this.health = health; 
+    
+    // Step 2: It secretly executes a hidden return statement: return this;
+}
+
+// Creating multiple distinct instances from the blueprint:
+let player1 = new Player("Briar", "Mage", 100);
+let player2 = new Player("Alex", "Warrior", 150);
+
+console.log(player1.name); // Prints: "Briar"
+console.log(player2.role); // Prints: "Warrior"
+
+
+// Memory Architecture & The Prototype Chain
+// In Computer Science, putting functions directly inside a constructor is bad practice.
+// If you create 10,000 players, copying an attack function 10,000 times clogs up the Heap memory.
+// Instead, we attach the function ONCE to the shared Prototype box.
+
+Player.prototype.attack = function() {
+    console.log(`${this.name} swings their weapon!`);
+};
+
+// Both players share the EXACT SAME single function in memory now!
+player1.attack(); // Prints: "Briar swings their weapon!"
+player2.attack(); // Prints: "Alex swings their weapon!"
+
+/*The JS engine look-up sequence (Property Resolution):
+ When player1.attack() runs, the engine looks inside the local player1 cabinet. 
+ It fails to find an attack folder there. 
+ It instantly follows the hidden prototype link (__proto__) up to Player.prototype.
+ It finds the shared function there and executes it perfectly. */
