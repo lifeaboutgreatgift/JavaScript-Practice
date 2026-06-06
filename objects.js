@@ -43,3 +43,62 @@ let writer = {
 
 console.log(writer["likes birds"]);
 
+
+// Bracket Notation Superpower: Dynamic Key Lookup
+// Dot notation requires you to hardcode the exact folder name. 
+// Bracket notation allows you to use a VARIABLE to choose the folder on the fly.
+
+let userSelection = "name"; 
+console.log(writer[userSelection]); // Evaluates to writer["name"] -> Prints: "Jane"
+
+
+// Modifying Objects (Adding and Deleting properties)
+// Objects are mutable, meaning you can add or remove folders on the fly.
+
+writer.rank = "Gold";       // Adding a brand new folder named 'rank'
+delete writer["likes birds"]; // Surgical extraction: permanently deletes 'likes birds'
+
+
+// Property Existence Check (The "in" Operator)
+// Used to check if a specific folder exists inside the cabinet. Returns true or false.
+
+console.log("rank" in writer);       // Prints: true
+console.log("age" in writer);        // Prints: false (folder does not exist)
+
+
+// The for...in Loop (Automated Cabinet Audit)
+// Walks through every single folder in the object one by one.
+
+for (let key in writer) {
+    console.log(key);        // Prints the folder tab label (e.g., "name", "rank")
+    console.log(writer[key]); // Prints the value inside that folder (e.g., "Jane", "Gold")
+}
+
+
+// Memory Architecture: Reference Copying (The Master Trap)
+// Primitives copy by value (independent copies). Objects copy by REFERENCE.
+// You do not clone the cabinet; you just hand over a duplicate KEY to the same cabinet.
+
+let admin = writer; // Both variables now point to the EXACT SAME object in the Heap memory.
+admin.name = "Pete"; 
+console.log(writer.name); // Prints: "Pete"! The original writer object was mutated.
+
+
+// Garbage Collection & Unreachability
+// If you set an object reference to null (writer = null;), you sever the link.
+// When an object has zero pointers leading to it, it becomes "unreachable".
+// The engine's Mark-and-Sweep algorithm will automatically wipe it from Heap memory.
+
+
+// Methods and the "this" Keyword
+// A folder inside an object can hold an entire function recipe. This is called a Method.
+// The "this" keyword represents a self-reference mirror ("this exact cabinet I am inside").
+
+let wizard = {
+    name: "Merlin",
+    mana: 20,
+    castSpell: function() {
+         this.mana -= 5; // 'this.mana' means 'wizard.mana'
+    }
+};
+wizard.castSpell(); // Executing the method updates wizard.mana to 15
