@@ -69,3 +69,47 @@ pageParagraph.style.backgroundColor = "yellow";   // CSS: background-color: yell
 // CRUCIAL SYNTAX RULE: All visual metrics passed to style folders must be strings carrying exact units!
 pageParagraph.style.fontSize = "24px";            // CSS: font-size: 24px; 
 pageParagraph.style.marginTop = "50px";           // CSS: margin-top: 50px;
+
+
+// *****5. DOM Mutation Safety Check
+
+
+// PROBLEM: querySelector returns null if element not found
+let missingElement = document.querySelector("#fake-id-name");
+// Returns: null
+
+// ❌ CRASH: Accessing properties on null
+// missingElement.innerText = "Hello"; // TypeError!
+
+// ✅ SOLUTION 1: Guard Clause (Traditional)
+if (missingElement !== null) {
+    missingElement.innerText = "Safely populated text.";
+}
+
+// ✅ SOLUTION 2: Truthy Check (Simpler)
+if (missingElement) {
+    missingElement.innerText = "Safely populated text.";
+}
+
+// ✅ SOLUTION 3: Optional Chaining (Modern - ES2020)
+missingElement?.innerText = "Text";  // Does nothing if null
+
+// REAL-WORLD EXAMPLE:
+const loginForm = document.querySelector("#login-form");
+if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log("Form submitted!");
+    });
+} else {
+    console.warn("Login form not found on page!");
+}
+
+// QUERYSELECTORALL NOTE:
+// Returns empty NodeList (not null!), so check length:
+const buttons = document.querySelectorAll(".btn");
+if (buttons.length === 0) {
+    console.log("No buttons found");
+} else {
+    buttons.forEach(btn => console.log(btn));
+}
