@@ -38,6 +38,34 @@
 */
 
 // Fetching object reference keys and packing them into local variable boxes:
-let pageHeading = document.querySelector("#main-title");    // ✅ Precision Targeting via unique ID.
-let pageParagraph = document.querySelector(".txt-content"); // ✅ Class targeting.
-let nativeButton = document.querySelector("button");       // ✅ Simple tag targeting.
+let pageHeading = document.querySelector("#main-title");     //  Precision Targeting via unique ID.
+let pageParagraph = document.querySelector(".txt-content"); //  Class targeting.
+let nativeButton = document.querySelector("button");       //  Simple tag targeting.
+
+// ******3. Modifying Text Content (.innerText)
+// Every text node contains an internal property folder named '.innerText'.
+// Assigning a new string value to this property instantly overwrites the text visible on the user's screen.
+
+pageHeading.innerText = "Game Over, Player 1!"; 
+// 🧠 Computer Science Lifecycle:
+// 1. The CPU looks inside the 'pageHeading' reference pointing to Heap memory.
+// 2. It opens the 'innerText' property folder and rewrites the string.
+// 3. The browser engine instantly re-renders the pixels on your monitor display.
+
+// ******4. Modifying Visual Layout Styles (.style)
+
+// Every structural DOM node contains an internal object folder named '.style'.
+// Inside this nested sub-folder sit all individual CSS layout configurations .
+
+// THE JAVASCRIPT CAMELCASE RULE ⚠️:
+// In CSS documents, properties use dashes (e.g., background-color, font-size).
+// In JavaScript, a dash is interpreted as a mathematical subtraction operator!
+// To prevent compilation crashes, the browser converts all dashed CSS properties into camelCase variables.
+
+// Applying active visual mutations via dot notation:
+pageParagraph.style.color = "blue";               // CSS: color: blue;
+pageParagraph.style.backgroundColor = "yellow";   // CSS: background-color: yellow;
+
+// CRUCIAL SYNTAX RULE: All visual metrics passed to style folders must be strings carrying exact units!
+pageParagraph.style.fontSize = "24px";            // CSS: font-size: 24px; 
+pageParagraph.style.marginTop = "50px";           // CSS: margin-top: 50px;
